@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root{
+    --c-gray-900: #000000;
+    --c-gray-800: #1f1f1f;
+    --c-gray-700: #2e2e2e2e;
+    --c-gray-600: #31313131;
+    --c-gray-500: #969593;
+    --c-gray-400: #a6a6a6a6;
+    --c-gray-300: #f1f1f1;
+    --c-gray-200: #bdbbb7;
+    --c-gray-100: #ffffff;
+    --c-green-500: #45ffbc;
+    --c-olive-500: #e3ffa3;
+    --c-white:var(--c-gray-100);
+    --c-text-primary :var(--c-gray-100);
+    --c-text-secondary:var(--c-gray-300);
+    --c-text-tertiary:var(--c-gray-500);
+
+}
+
+body{
+    line-height: 1.5;
+    min-height: 100vh;
+    font-family: "Merriweather", "sans-serif";
+    background-color: var(--c-gray-900);
+    display: flex;
+    padding-top: 3vw;
+    padding-bottom: 3vw;
+    justify-content: center;
+}
+
+*,
+*:befone,
+*:after {
+    box-sizing: border-box; 
+}
+
+img {
+   display: block;
+   max-width: 100%;
+}
+
+button,
+select,
+input,
+textarea {
+    font: inherit;
+}
+
+a {
+    color: inherit;
+}
+
+.responsive-wrapper {
+    width: 90%;
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.app{
+    min-height: 80vh;
+    width: 95%;
+    max-width: 1600px;
+    background-color: var(--c-gray-800);
+    padding: 2vw 4vw 6vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.app-header{
+    display: grid;
+    grid-template-columns: minmax(-webkit-min-content, 175px) minmax(-webkit-max-content, 1fr) minmax(-webkit-max-content, 400px);
+    grid-template-columns: minmax(min-content, 175px) minmax(min-content, 1fr) minmax(min-content, 400px);
+    -moz-column-gap: 4rem;
+         column-gap: 4rem;
+    align-items: flex-end;
+}
+
+@media (max-width: 1200px) {
+    .app-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid var(--c-gray-600);
+    }
+}
+ .app-header-navigation a{
+    padding: .2rem;
+    justify-content: space-around;
+    display: flex;
+ }
+
+ @media (max-width: 1200px) {
+    .app-header-navigation {
+        display: none;
+    }
+ }
+
+ .app-header-actions{
+    display: flex;
+    align-items: center;
+ }
+
+ @media (max-width: 1200px) {
+    .app-header-actions{
+        display: none;
+    }
+ }
+
+ .app-header-actions-buttons {
+    display: flex;
+    border-left: 1px solid var(--c-gray-600);
+    margin-left: 2rem;
+    padding-left: 2rem;
+ }
+
+ .app-header-actions-buttons > *+* {
+    margin-left: 1rem;
+ }
+
+.app-header-mobile{
+    display: none;
+}
+
+@media (max-width: 1200px) {
+    .app-header-mobile {
+        display: flex;
+    }
+}
+
+.app-body {
+    height: 100%;
+    display: grid;
+    grid-template-columns: minmax(-webkit-min-content, 175px) minmax(-webkit-max-content, 1fr) minmax(-webkit-min-content, 400px);
+    grid-template-columns: minmax(min-content, 175px) minmax(min-content, 1fr) minmax(min-content, 400px);
+    -moz-column-gap: 4rem;
+           column-gap: 4rem;
+    padding-top: 2.5rem;
+}
+
+@media (max-width: 1200px) {
+    .app-body{
+        grid-template-columns: 1fr;
+    }
+
+    .app-body > * {
+        margin-bottom: 3.5rem;
+    }
+}
+
+.app-body-navigation{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+@media (max-width: 1200px) {
+    .app-body-navigation {
+        display: none;
+    }
+}
+
+.footer {
+    margin-top: auto;
+}
+
+.footer h1 {
+    font-size: 1.5rem;
+    line-height: 1.125;
+    display: flex;
+    align-items: flex-start;
+}
+
+.footer h1 small {
+    font-size: 0.5rem;
+    margin-left: 0.25rem;
+}
+
+.footer div{
+    border-top: 1px solid var(--c-gray-600);
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    font-size: 0.75rem;
+    color: var(--c-text-tertiary);
+}
